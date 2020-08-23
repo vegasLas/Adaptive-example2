@@ -1,0 +1,93 @@
+@import './mixin.scss';
+
+.partners {
+    
+    &__row {
+        @include flexbox();
+        justify-content: center;
+    }
+
+    &__content {
+        position: absolute;
+        z-index: 10;
+        padding: 70px 0 60px 0;
+        @include flexbox();
+        justify-content: center;
+
+        @media (max-width: 1400px) {
+            padding: 50px 0 40px 0;
+        }
+        @media (max-width: 1000px) {
+            padding: 20px 0 20px 0;
+        }
+        @media (max-width: 500px) {
+            padding: 0px 0 0px 0;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        color: #ffffff;
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 1.8px;
+
+        @media (max-width: 780px) {
+            font-size: 20px;
+        }
+        @media (max-width: 500px) {
+            font-size: 18px;
+            letter-spacing: 10px;
+        }
+    }
+
+    &__icons {}
+
+    &__screen {
+        height: auto;
+        position: relative;
+        display: block;
+
+    }
+}
+
+.partners-screen {
+    &__bg {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        height: 0;
+        padding-bottom: 20.4%;
+        @media (max-width: 780px) {
+            padding-bottom: 30.4%;
+        }
+    }
+}
+
+.icons {
+    &__body {
+        @include flexbox();
+        margin-top: 123px;
+        @media (max-width: 1400px) {
+            margin-top: 63px;
+        }
+        @media (max-width: 500px) {
+            margin-top: 30px;
+        }
+
+        li {
+            padding: 0 57.5px;
+            @media (max-width: 1000px) {
+                padding: 0 20.5px;
+            }
+            @media (max-width: 780px) {
+                padding: 0 10.5px;
+            }
+            @media (max-width: 500px) {
+                padding: 0 5px;
+            }
+        }
+    }
+
+}

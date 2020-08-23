@@ -1,0 +1,99 @@
+@import './mixin.scss';
+
+.portfolio {
+    padding: 107px 0 62px 0;
+    @media (max-width: 767px) {
+        padding: 37px 0 32px 0;
+    }
+
+    &__body {
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &__title {
+        color: #000000;
+        font-family: 'Lato', sans-serif;
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 5.43px;
+        position: relative;
+        @media (max-width: 767px) {
+            font-size: 24px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 81px;
+            height: 1px;
+            background-color: #000000;
+            bottom: -40px;
+            left: 50%;
+            transform: translate(-50%, 0) rotate(0);
+        }
+    }
+
+    &__navbar {
+        margin-top: 91px;
+    }
+
+    &__columns {
+        @include flexbox();
+    }
+
+    &__btn {}
+}
+
+.navbar-portfolio {
+
+    &__body {
+        @include flexbox()
+    }
+
+    &__link {
+        color: #3c3c3c;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 0 24px;
+        @media (max-width: 767px) {
+            margin: 0 12px;
+        }
+
+        &:hover {
+            color: #ada074;
+            font-weight: 700;
+        }
+
+    }
+}
+
+.column-block {
+    @include flexbox();
+    
+
+    &__piace {
+        flex: 0 1 50%;
+    }
+}
+
+.link {
+    height: 100%;
+    position: relative;
+    display: block;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding-bottom: 100%;
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,255 @@
+@import "./mixin.scss";
+
+.contact {
+    padding: 190px 0 100px 0;
+
+    @media (max-width: 767px) {
+        padding: 60px 0 30px 0;
+    }
+
+    @media (max-width: 500px) {
+        padding: 20px 0 10px 0;
+    }
+
+    &__content {
+        max-width: 718px;
+        margin: 0 auto;
+    }
+
+    &__row {
+        @media (max-width: 767) {
+            flex-direction: column;
+        }
+    }
+
+    &__btn {
+        button {
+            background-color: rgb(0, 0, 0, 0);
+            /* Style for "SEND" */
+            color: #000000;
+            font-family: 'Lato', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            /* Text style for "SEND" */
+            letter-spacing: 0.84px;
+            float: right;
+            margin-top: 20px;
+            margin-right: 25px;
+
+            @media (max-width: 767px) {
+                margin-top: 15px;
+            }
+        }
+
+    }
+
+
+    &__title {
+        font-family: 'Lato', sans-serif;
+        font-size: 30px;
+        letter-spacing: 1.8px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 700;
+        position: relative;
+        text-align: center;
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 80px;
+            height: 2px;
+            background-color: black;
+            left: 50%;
+            bottom: -45px;
+            transform: translate(-50%, 0) rotate(0);
+        }
+    }
+
+    &__columns {
+        @include flexbox();
+        margin-top: 160px;
+
+        @media (max-width: 767px) {
+            flex-direction: column;
+            padding: 0 10px;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 500px) {
+            margin-top: 80px;
+        }
+    }
+
+    &__body {
+        @include flexbox();
+        flex: 0 1 50%;
+        flex-direction: column;
+
+        @media (max-width: 767px) {}
+    }
+}
+
+.form {
+    padding-top: 4px;
+
+    &__row {
+        @include flexbox();
+
+        @media (max-width: 420px) {
+            flex-direction: column;
+        }
+    }
+
+    &__name {
+        margin-right: 60px;
+
+        @media (max-width: 420px) {
+            display: flex;
+            margin-right: 0px;
+            flex-direction: column;
+        }
+    }
+
+    &__email {
+        @media (max-width: 420px) {
+            display: flex;
+            margin-right: 0px;
+            flex-direction: column;
+        }
+
+    }
+}
+
+.form-name {
+
+    &__title {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.8px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+        display: block;
+
+        @media (max-width: 767px) {
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+    }
+
+    &__input {
+        border-top: 1px solid black;
+        max-width: 135px;
+        height: 35px;
+        background-color: #f8f7f7;
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
+    }
+}
+
+.message {
+    margin-top: 55px;
+
+    @media (max-width: 767px) {
+        margin-top: 0px;
+    }
+
+    &__title {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.8px;
+        color: black;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    textarea {
+        max-width: 330px;
+        border-top: 1px solid black;
+        height: 120px;
+        background-color: #f8f7f7;
+        resize: 0;
+        overflow: auto;
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+        }
+    }
+
+    @include flexbox();
+    flex-direction: column;
+    padding-top: 20px;
+}
+
+.helper {
+    margin-left: 10px;
+    color: #5f5f5f;
+
+    @media (max-width: 767px) {
+        margin-top: 15px;
+    }
+
+    &__text {
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        letter-spacing: 1.8px;
+        line-height: 20px;
+        font-weight: 400;
+        margin-bottom: 40px;
+
+        @media (max-width: 767px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__name {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        letter-spacing: 1.8px;
+        font-weight: 700;
+        color: black;
+    }
+
+    &__social-links {
+        display: flex;
+        margin-top: 20px;
+
+        @media (max-width: 767px) {
+            margin-top: 10px;
+        }
+
+        a {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:first-child {
+                margin-right: 5px;
+            }
+
+        }
+    }
+
+    &__email {
+        margin-top: 14px;
+        font-family: 'Lato', sans-serif;
+        font-size: 15px;
+        letter-spacing: 1.8px;
+        font-weight: 400;
+        color: black;
+
+        span {
+            font-weight: 700;
+        }
+    }
+}

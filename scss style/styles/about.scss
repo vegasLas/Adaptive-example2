@@ -1,0 +1,126 @@
+@import './mixin.scss'; 
+
+.about {
+    padding: 100px 0 59px 0;
+
+    @media (max-width: 767px) {
+        padding-top: 30px;
+        padding-bottom: 29px;
+    }
+    &__row {
+        @include flexbox();
+        flex-direction: column;
+    }
+
+    &__content {
+        @include flexbox();
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        height: 26px;
+        color: #000000;
+        font-family: 'Lato', sans-serif;
+        font-size: 34px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 8.95px;
+        position: relative;
+        @media (max-width: 767px) {
+            font-size: 24px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 81px;
+            height: 1px;
+            background-color: #000000;
+            transform: translate(-50%, 0) rotate(0);
+            left: 50%;
+            bottom: -35px;
+        }
+    }
+
+    &__text {
+        text-align: center;
+        margin-top: 73px;
+        color: #868585;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 25.89px;
+        max-width: 688px;
+    }
+
+    &__columns {
+        @include flexbox();
+        margin-top: 69px;
+        @media (max-width: 767px) {
+            flex-direction: column;
+            margin-top: 20px;
+        }
+    }
+}
+
+.conntainer {}
+
+.minicolumn-about {
+    flex: 0 1 33.333%;
+}
+
+.minicolumn {
+    margin: 0 50px;
+    @include flexbox();
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+    &__icon {
+        width: 92px;
+        height: 92px;
+        border: 2px solid #f4f4f4;
+        border-radius: 50%;
+        @include flexbox();
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        color: #000000;
+        font-family: "Lato", sans-serif;
+        font-size: 22px;
+        text-transform: uppercase;
+        letter-spacing: 3.52px;
+        margin-top: 35px;
+    }
+
+    &__text {
+        height: 66px;
+        color: #868585;
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 26px;
+        margin-top: 35px;
+    }
+    @media (max-width: 1050px) {
+        &__title {
+            margin-top: 15px;
+        }
+        &__text {
+            margin-top: 15px;
+        }
+        margin: 0 30px;
+    }
+    @media (max-width: 767px) {
+        margin: 20px 10px 0 10px;
+        &:first-child {
+            margin-top: 0px;
+        }
+
+
+    }
+}
